@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario u5e2</title>
+    <style>
+        label,p{
+            display:block;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        input:invalid:focus{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>FORMULARIO</h1>
+    <form id="formulario" name="formulario" >
+        <label>Nombre: <input type="text" id="nombre" name="nombre" required pattern ="^[A-Za-z][A-Za-z ]*{3,20}"/></label>
+        <label>Apellidos: <input type="text" id="apellidos" name="apellidos" required pattern ="^[A-Za-z]+ ?[A-Za-z]*{2,50}"/></label>
+        <label>DNI: <input type="text" id="DNI" title="Formato DNI con la letra mayuscula"/></label>
+        <label>Usuario: <input type="text" id="user"/></label>
+        <label>Fecha Nacimiento: <input type="date" id="fechaNacimiento"/> </label></div>
+        <label>Telefono: <input type="tel" id="telefono" /> </label>
+        <label>Movil: <input type="tel" id="movil"/> </label>
+        <label>Correo Electronico: <input type="email" id="email" /> </label>
+        <label> Tipo de usuario :
+            <select id="usuario">
+                <option value="iniciacion">Iniciación</option>
+                <option value="medio">Medio</option>
+                <option value="avanzado">Avanzado</option>
+                <option value="NivelDios">Nivel Dios</option>
+            </select>
+        </label>
+        <p>Deseas recibir avisos comerciales:
+            <label>  <input type="radio" name="comercial" id="avisosSI" value="SI"/>SI</label>
+            <label>  <input type="radio" name="comercial" id="avisosNO" value="NO"/>NO </label>
+        </p>
+        
+        <label><input type="checkbox" id="condiciones" />Acepto las condiciones</label> 
+        <label> Enviar Registro
+            <input type="submit" id="enviar"/>
+            <input type="reset" id="reiniciar"/> 
+        </label>   
+        
+    </form>
+    <script src="validacion.js"></script>
+</body>
+</html>
